@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'bourbon'
+gem 'neat'
+gem 'jekyll-assets'
+gem 'coffee-rails'
+gem 'uglifier'
