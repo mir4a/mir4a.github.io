@@ -1,6 +1,8 @@
 name: Martynov Myroslav
 markdown: redcarpet
 pygments: true
+safe: false
+lsi: false
 
 exclude: [_config.yml, Gemfile, Gemfile.lock]
 
