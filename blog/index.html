@@ -1,0 +1,15 @@
+---
+layout: default
+title: Martynov Myroslav front-end dev
+---
+
+<div id="blog">
+  <h2>Loop through my thoughts:</h2>
+  <ul class="posts">
+    {% for post in site.posts limit: 5 %}
+    <li>
+      <date>{{ post.date | date_to_string }}</date> &raquo;
+      <a href="{{ post.url }}" class="post_url">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

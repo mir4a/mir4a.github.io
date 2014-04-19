@@ -1,0 +1,40 @@
+battery, charge
+  display: block
+
+$battery_height: 10px
+$battery_width: 25px
+$battery_color: #333
+battery
+  width: $battery_width
+  height: $battery_height
+  position: absolute
+  top: 10px
+  right: 10px
+  background: #fff
+  border: 1px solid $battery_color
+  border-radius: 3px
+  &:before
+    content: ''
+    width: 2px
+    height: $battery_height*0.33
+    position: absolute
+    left: -3px
+    top: 50%
+    margin-top: -(($battery_height*0.33)/2)
+    background: $battery_color
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    border: 1px solid #fff
+    border-radius: 2px
+  charge
+    width: auto
+    height: $battery_height
+    margin: -1px
+    background: green
+    float: right
+    border-radius: 2px

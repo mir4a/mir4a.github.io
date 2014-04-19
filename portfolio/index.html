@@ -1,0 +1,14 @@
+---
+layout: default
+title: Martynov Myroslav front-end dev
+---
+
+<div id="blog">
+  <h2>Loop through my works:</h2>
+  <ul class="posts">
+    {% for work in site.data.projects %}
+    <li>
+      <a href="{{ work[1].url }}" class="post_url">{{ work[1].title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
