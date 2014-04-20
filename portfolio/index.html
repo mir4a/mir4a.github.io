@@ -4,11 +4,18 @@ title: Martynov Myroslav front-end dev
 ---
 
 <div id="blog">
+  <h1>Portfolio</h1>
+  <h6>Notice</h6>
+  <p>
+    PLease note, many of works listed below was made with team collaborations in different agencies. That's why I mentioned them and described my personal role and contribution. But some works I don't have rights to represent because of NDA restrictions (they listed too, but without any identity).
+  </p>
   <h2>Loop through my works:</h2>
   <ul class="posts">
     {% for work in site.data.projects %}
     <li>
-      <a href="{{ work[1].url }}" class="post_url">{{ work[1].title }}</a></li>
+      <a href="http://{{ work[1].url }}" rel="nofollow" class="post_url">{{ work[1].title }}</a> {% if work[1].agency %}<span>({{work[1].agency}})</span>{% endif %}<br />
+      <span>{{work[1].role}}</span>
+    </li>
     {% endfor %}
   </ul>
 </div>

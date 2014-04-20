@@ -4,7 +4,7 @@ pygments: true
 safe: false
 lsi: false
 
-exclude: [_config.yml, Gemfile, Gemfile.lock]
+exclude: [_config.yml, Gemfile, Rakefile, Gemfile.lock]
 
 gems: [jekyll-assets]
 

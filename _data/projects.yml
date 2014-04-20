@@ -1,6 +1,61 @@
+syvylya:
+  title: "Syvulya"
+  description: "It was the second site I was designed it's homepage."
+  role: "Design."
+  agency: Megainfo
+  url: "syvulya.com.ua"
+  live: true
+  date: 2010-12-10
+race:
+  title: "Race. Rental car service."
+  description: "The very first my design job."
+  role: "Design."
+  agency: Megainfo
+  url: "race.net.ua"
+  live: true
+  date: 2010-11-10
+rails:
+  title: "Ukrmashservice."
+  description: "Another one design with using 3d rendering for illustration at header."
+  role: "Design, 3d rendering, ui design."
+  agency: Megainfo
+  url: "rails.com.ua"
+  live: true
+  date: 2011-06-10
+fond-sp:
+  title: "Fond SP. Interior and exterior stuff."
+  description: "It was a great experience of creating icons and illustrations for this site."
+  role: "Design of homepage, icons and illustrations."
+  agency: Megainfo
+  url: "fondsp.dn.ua"
+  live: true
+  date: 2011-07-20
+cryo-tm:
+  title: "Cryo Inter Trading"
+  description: "The very first my design job."
+  role: "Design, 3d rendering."
+  agency: Megainfo
+  url: "cryo-tm.com.ua"
+  live: true
+  date: 2011-07-10
 artnataly:
   title: "Art Nataly"
   description: "Personal site of an artist Natalia Shiptuchovskaya. It was the very first my html/css coding. It was the beginning."
+  role: "Design, coding and hosting."
   url: "art-nataly.com"
   live: true
   date: 2011-06-10
+3taim:
+  title: "The Third Time. Football blog."
+  description: "It was the very first site developing from scratch."
+  role: "Design, coding, wordpress theming and hosting."
+  url: "3taim.com.ua"
+  live: true
+  date: 2011-09-20
+usk-rubin:
+  title: "USK Rubin. Football team."
+  description: "First time of responsive designing."
+  role: "Design, responsive, coding, wordpress theming and hosting."
+  url: "usk-rubin.com"
+  live: true
+  date: 2012-04-20

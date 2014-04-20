@@ -20,17 +20,20 @@ p
 a,:link
   color: $link
   text-decoration: none
-  border-bottom: 1px solid
+  border-bottom: 1px solid transparentize($link,0.5)
   &:visited
     color: $link_visited
+    border-color: transparentize($link_visited,0.5)
     &:hover
       color: $link_hover
+      border-color: transparentize($link_hover,0.5)
   &:hover
     text-decoration: none
     color: $link_hover
-    border-color: $link_hover
+    border-color: transparentize($link_hover,0.5)
   &:active
     color: $link_active
+    border-color: transparentize($link_active,0.5)
   &:focus
     outline: 1px dashed transparentize($link,0.25)
     box-shadow: none
