@@ -59,3 +59,74 @@ usk-rubin:
   url: "usk-rubin.com"
   live: true
   date: 2012-04-20
+ikotel:
+  title: "E-commerce template."
+  description: "Some design work for e-commerce business."
+  role: "Design."
+  agency: Megainfo
+  live: false
+  date: 2011-08-25
+vintage:
+  title: "Vintage studio."
+  description: "Designing for small studio of shades."
+  role: "Design, coding, wordpress theming."
+  agency: Inland Media
+  url: "vintage-studio.com.ua"
+  live: false
+  date: 2011-11-25
+djanem:
+  title: "Djanem. Beauty salon."
+  description: "Designed web site for beauty salon."
+  role: "Design."
+  agency: Inland Media
+  url: "djanem.com.ua"
+  live: true
+  date: 2011-12-25
+wolf:
+  title: "Wolf. Scenic equipment."
+  description: "Outsource working."
+  role: "Coding, wordpress theming."
+  agency: Primus Pro
+  url: "wolf.com.ua"
+  live: true
+  date: 2011-12-25
+tormoz:
+  title: "Tormoz. Braking equipment."
+  description: "Outsource working."
+  role: "Coding, wordpress theming."
+  agency: Primus Pro
+  url: "tormoz.com.ua"
+  live: true
+  date: 2011-12-25
+primus:
+  title: "Primus Pro. Digital agency."
+  description: "First iteration of Primus Pro web site. No longer actual."
+  role: "Coding, wordpress theming."
+  agency: Primus Pro
+  url: "primus-pro.com.ua"
+  live: true
+  date: 2012-02-25
+betamlin:
+  title: "Betamlin."
+  description: "Corporate web site for Betamlin company."
+  role: "Coding, wordpress theming."
+  agency: AdFactory
+  url: "betamlin.com.ua"
+  live: true
+  date: 2012-07-25
+thesmena:
+  title: "The Smena. Digital agency."
+  description: "Site for digital agency."
+  role: "Html/css/js + blog section on wp."
+  agency: The Smena
+  url: "thesmena.com"
+  live: true
+  date: 2012-11-25
+brandmobile:
+  title: "Brandmobile. Advertise agency."
+  description: "Site and cost calculator for advertise agency."
+  role: "Template integration with wordpress and angular js calculator."
+  agency: AdFactory
+  url: "brandmobile.com.ua"
+  live: true
+  date: 2013-09-25

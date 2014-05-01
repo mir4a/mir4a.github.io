@@ -13,7 +13,11 @@ title: Martynov Myroslav front-end dev
   <ul class="posts">
     {% for work in site.data.projects %}
     <li>
+      {% if work[1].live %}
       <a href="http://{{ work[1].url }}" rel="nofollow" class="post_url">{{ work[1].title }}</a> {% if work[1].agency %}<span>({{work[1].agency}})</span>{% endif %}<br />
+      {% else %}
+      <span class="post_url">{{ work[1].title }}</span> {% if work[1].agency %}<span>({{work[1].agency}})</span>{% endif %}<br />
+      {% endif %}
       <span>{{work[1].role}}</span>
     </li>
     {% endfor %}
