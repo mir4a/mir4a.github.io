@@ -1,0 +1,25 @@
+@mixin filter ($type)
+  @include prefixer(filter, $type, webkit spec)
+
+
+body
+  margin: 0
+  padding: 0
+  font-size: 10px
+
+.blur_wrap
+  position: relative
+  .bg_blur
+    position: absolute
+    top: 0
+    left: 0
+    background: image_url('experimental/css3-blur/viebon.jpg') no-repeat
+    z-index: 0
+    @include filter(blur(10px))
+  .bg_norm
+    position: absolute
+    top: 0
+    left: 0
+    background: image_url('experimental/css3-blur/viebon.jpg') no-repeat
+    clip: rect(auto, 75em, auto, 10em)
+    z-index: 1
