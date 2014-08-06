@@ -87,15 +87,15 @@ wolf:
   description: "Outsource working."
   role: "Coding, wordpress theming."
   agency: Primus Pro
-  url: "wolf.com.ua"
-  live: true
+  url: "wolf.dn.ua"
+  live: false
   date: 2011-12-25
 tormoz:
   title: "Tormoz. Braking equipment."
   description: "Outsource working."
   role: "Coding, wordpress theming."
   agency: Primus Pro
-  url: "tormoz.com.ua"
+  url: "tormoz.dn.ua"
   live: true
   date: 2011-12-25
 primus:
@@ -111,7 +111,7 @@ betamlin:
   description: "Corporate web site for Betamlin company."
   role: "Coding, wordpress theming."
   agency: AdFactory
-  url: "betamlin.com.ua"
+  url: "beta-mlin.com.ua"
   live: true
   date: 2012-07-25
 thesmena:
@@ -128,5 +128,13 @@ brandmobile:
   role: "Template integration with wordpress and angular js calculator."
   agency: AdFactory
   url: "brandmobile.com.ua"
-  live: true
+  live: false
   date: 2013-09-25
+xsport:
+  title: "XSport."
+  description: "Site about sports news."
+  role: "HTML/CSS coding, custom AngularJS plugins."
+  agency: AdFactory
+  url: "xsport.ua"
+  live: true
+  date: 2013-12-20
