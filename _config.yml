@@ -1,20 +1,22 @@
 name: Martynov Myroslav
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 safe: false
 lsi: false
 
 exclude: [_config.yml, Gemfile, Rakefile, Gemfile.lock]
 
-gems: [jekyll-assets]
-
-assets:
-  dirname: assets
-  baseurl: /assets/
-  sources:
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _assets/images
+#gems: [jekyll-assets]
+sass:
+  sass_dir: _sass
+#
+#assets:
+#  dirname: assets
+#  baseurl: /assets/
+#  sources:
+#    - _assets/javascripts
+#    - _assets/stylesheets
+#    - _assets/images
   # Sets JS compressor. No compression by default.
   # Possible variants: 'yui', 'uglifier', nil
   #

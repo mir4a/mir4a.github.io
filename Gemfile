@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-gem 'github-pages'
 gem 'bourbon'
 gem 'neat'
-gem 'jekyll-assets'
+gem 'jekyll',  '>= 2.2.0'
 gem 'coffee-rails'
 gem 'uglifier'
