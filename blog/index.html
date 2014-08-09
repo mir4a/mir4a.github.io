@@ -8,7 +8,7 @@ title: Martynov Myroslav front-end dev
   <ul class="posts">
     {% for post in site.posts limit: 5 %}
     <li>
-      <date>{{ post.date | date_to_string }}</date> &raquo;
+      <time>{{ post.date | date_to_string }}</time> &raquo;
       <a href="{{ post.url }}" class="post_url">{{ post.title }}</a></li>
     {% endfor %}
   </ul>

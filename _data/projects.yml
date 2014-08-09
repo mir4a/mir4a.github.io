@@ -134,7 +134,6 @@ xsport:
   title: "XSport."
   description: "Site about sports news."
   role: "HTML/CSS coding, custom AngularJS plugins."
-  agency: AdFactory
   url: "xsport.ua"
   live: true
   date: 2013-12-20
