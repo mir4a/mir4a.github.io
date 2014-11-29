@@ -3,7 +3,7 @@ markdown: redcarpet
 highlighter: pygments
 safe: false
 lsi: false
-url: http://mir4a.pp.ua
+url: http://localhost:4000
 
 exclude: [_config.yml, Gemfile, Rakefile, Gemfile.lock]
 
