@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'bourbon'
 gem 'neat'
-gem 'jekyll',  '>= 2.2.0'
+gem 'jekyll',  '>= 2.5.2'
 gem 'coffee-rails'
 gem 'uglifier'

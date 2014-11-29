@@ -1,0 +1,21 @@
+=blur($radius)
+  -webkit-filter: blur($radius)
+  filter: blur($radius)
+
+$offset_position: -20px
+.blurred_bg, .blurred_bg_hover
+  position: fixed
+  top: $offset_position
+  right: $offset_position
+  bottom: $offset_position
+  left: $offset_position
+  background: url("/images/experimental/bg_covers.jpg")
+  background-size: cover
+
+.blurred_bg
+  z-index: 0
+  +blur(5px)
+  +blur(5px)
+.blurred_bg_hover
+  clip: rect(0 0 0 0)
+  z-index: 1
