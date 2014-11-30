@@ -8,7 +8,7 @@ tags: blur, css, throttle, debounce, jquery
 ---
 
 This summer I was involved in studying front-end course sponsored by Binary Studio and the exit course project we've built was [Hurri](http://github.com/msemenistyi/hurri) — the project that streaming music from social network.
-One of the task was to build fancy sign up page and was thought that it would be great to made blurred bg with grids of greatest albums cover pics and put some fancy action on it.
+One of the task was to build fancy sign up page and I was thought that it would be great to made blurred bg with grids of greatest albums cover pics and put some fancy action on it.
 For the action I decided to use some kind of window which is moving by cursor and show un-blurred view of bg. Below you can see how to implement this using html, css and javascript.
 
 ##1. Making layers
