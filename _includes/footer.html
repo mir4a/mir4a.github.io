@@ -4,11 +4,11 @@
     {% if gh.owner_name %}
 
     <div>
-      <img src="{{gh.owner_gravatar_url}}" alt="Martynov Myroslav" width="64" height="64" class="ava" />
-      {{ gh.owner_name }}<br />
+      <img src="/images/mir4a_64.jpg" alt="Martynov Myroslav" width="64" height="64" class="ava" />
+      Miroslav Martynov<br />
       front-end developer<br />
       <a href="{{gh.owner_url}}">{{gh.owner_url}}</a><br />
-      <small>Build revision: <i>{{gh.build_revision}}</i></small>
+      <small>Last updated at: <i>{{gh.updated_at}}</i></small>
     </div>
     {% endif %}
   </div>

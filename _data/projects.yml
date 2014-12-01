@@ -1,137 +1,119 @@
-syvylya:
-  title: "Syvulya"
+- title: "Syvulya"
   description: "It was the second site I was designed it's homepage."
   role: "Design."
   agency: Megainfo
   url: "syvulya.com.ua"
   live: true
   date: 2010-12-10
-race:
-  title: "Race. Rental car service."
+- title: "Race. Rental car service."
   description: "The very first my design job."
   role: "Design."
   agency: Megainfo
   url: "race.net.ua"
   live: true
   date: 2010-11-10
-rails:
-  title: "Ukrmashservice."
+- title: "Ukrmashservice."
   description: "Another one design with using 3d rendering for illustration at header."
   role: "Design, 3d rendering, ui design."
   agency: Megainfo
   url: "rails.com.ua"
   live: true
   date: 2011-06-10
-fond-sp:
-  title: "Fond SP. Interior and exterior stuff."
+- title: "Fond SP. Interior and exterior stuff."
   description: "It was a great experience of creating icons and illustrations for this site."
   role: "Design of homepage, icons and illustrations."
   agency: Megainfo
   url: "fondsp.dn.ua"
   live: true
   date: 2011-07-20
-cryo-tm:
-  title: "Cryo Inter Trading"
+- title: "Cryo Inter Trading"
   description: "The very first my design job."
   role: "Design, 3d rendering."
   agency: Megainfo
   url: "cryo-tm.com.ua"
   live: true
   date: 2011-07-10
-artnataly:
-  title: "Art Nataly"
+- title: "Art Nataly"
   description: "Personal site of an artist Natalia Shiptuchovskaya. It was the very first my html/css coding. It was the beginning."
   role: "Design, coding and hosting."
   url: "art-nataly.com"
   live: true
   date: 2011-06-10
-3taim:
-  title: "The Third Time. Football blog."
+- title: "The Third Time. Football blog."
   description: "It was the very first site developing from scratch."
   role: "Design, coding, wordpress theming and hosting."
   url: "3taim.com.ua"
   live: true
   date: 2011-09-20
-usk-rubin:
-  title: "USK Rubin. Football team."
+- title: "USK Rubin. Football team."
   description: "First time of responsive designing."
   role: "Design, responsive, coding, wordpress theming and hosting."
   url: "usk-rubin.com"
   live: true
   date: 2012-04-20
-ikotel:
-  title: "E-commerce template."
+- title: "E-commerce template."
   description: "Some design work for e-commerce business."
   role: "Design."
   agency: Megainfo
   live: false
   date: 2011-08-25
-vintage:
-  title: "Vintage studio."
+- title: "Vintage studio."
   description: "Designing for small studio of shades."
   role: "Design, coding, wordpress theming."
   agency: Inland Media
   url: "vintage-studio.com.ua"
   live: false
   date: 2011-11-25
-djanem:
-  title: "Djanem. Beauty salon."
+- title: "Djanem. Beauty salon."
   description: "Designed web site for beauty salon."
   role: "Design."
   agency: Inland Media
   url: "djanem.com.ua"
   live: true
   date: 2011-12-25
-wolf:
-  title: "Wolf. Scenic equipment."
+- title: "Wolf. Scenic equipment."
   description: "Outsource working."
   role: "Coding, wordpress theming."
   agency: Primus Pro
   url: "wolf.dn.ua"
   live: false
   date: 2011-12-25
-tormoz:
-  title: "Tormoz. Braking equipment."
+- title: "Tormoz. Braking equipment."
   description: "Outsource working."
   role: "Coding, wordpress theming."
   agency: Primus Pro
   url: "tormoz.dn.ua"
   live: true
   date: 2011-12-25
-primus:
-  title: "Primus Pro. Digital agency."
+- title: "Primus Pro. Digital agency."
   description: "First iteration of Primus Pro web site. No longer actual."
   role: "Coding, wordpress theming."
   agency: Primus Pro
   url: "primus-pro.com.ua"
   live: true
   date: 2012-02-25
-betamlin:
-  title: "Betamlin."
+- title: "Betamlin."
   description: "Corporate web site for Betamlin company."
   role: "Coding, wordpress theming."
   agency: AdFactory
   url: "beta-mlin.com.ua"
   live: true
   date: 2012-07-25
-thesmena:
-  title: "The Smena. Digital agency."
+- title: "The Smena. Digital agency."
   description: "Site for digital agency."
   role: "Html/css/js + blog section on wp."
   agency: The Smena
   url: "thesmena.com"
   live: true
   date: 2012-11-25
-brandmobile:
-  title: "Brandmobile. Advertise agency."
+- title: "Brandmobile. Advertise agency."
   description: "Site and cost calculator for advertise agency."
   role: "Template integration with wordpress and angular js calculator."
   agency: AdFactory
   url: "brandmobile.com.ua"
   live: false
   date: 2013-09-25
-xsport:
-  title: "XSport."
+- title: "XSport."
   description: "Site about sports news."
   role: "HTML/CSS coding, custom AngularJS plugins."
   url: "xsport.ua"

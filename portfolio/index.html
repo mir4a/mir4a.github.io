@@ -9,16 +9,19 @@ title: Martynov Myroslav front-end dev
   <p>
     PLease note, many of works listed below was made with team collaborations in different agencies. That's why I mentioned them and described my personal role and contribution. But some works I don't have rights to represent because of NDA restrictions (they listed too, but without any identity).
   </p>
+  {% assign works = site.data.projects | sort: 'date' %}
   <h2>Loop through my works:</h2>
+    <small>(total: {{ works | size }}, latest is first in this list)</small>
   <ul class="posts">
-    {% for work in site.data.projects %}
+    {% for work in works  %}
+    {% assign i = forloop.rindex0 %}
     <li>
-      {% if work[1].live %}
-      <a href="http://{{ work[1].url }}" rel="nofollow" class="post_url">{{ work[1].title }}</a> {% if work[1].agency %}<span>({{work[1].agency}})</span>{% endif %}<br />
+      {% if works[i].live %}
+      <a href="http://{{ works[i].url }}" rel="nofollow" class="post_url">{{ works[i].title }}</a> {% if works[i].agency %}<span>({{works[i].agency}})</span>{% endif %}<br />
       {% else %}
-      <span class="post_url">{{ work[1].title }}</span> {% if work[1].agency %}<span>({{work[1].agency}})</span>{% endif %}<br />
+      <span class="post_url">{{ works[i].title }}</span> {% if works[i].agency %}<span>({{works[i].agency}})</span>{% endif %}<br />
       {% endif %}
-      <span>{{work[1].role}}</span>
+      <span>{{works[i].role}}</span>
     </li>
     {% endfor %}
   </ul>
