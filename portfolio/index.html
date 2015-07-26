@@ -7,7 +7,10 @@ title: Martynov Myroslav front-end dev
   <h1>Portfolio</h1>
   <h6>Notice</h6>
   <p>
-    PLease note, many of works listed below was made with team collaborations in different agencies. That's why I mentioned them and described my personal role and contribution. But some works I don't have rights to represent because of NDA restrictions (they listed too, but without any identity).
+    PLease note, many of works listed below was made with team collaborations in different agencies.
+    That's why I mentioned them and described my personal role and contribution.
+    But some works I don't have rights to represent because of NDA restrictions (they listed too, but
+    without any identity).
   </p>
   {% assign works = site.data.projects | sort: 'date' %}
   <h2>Loop through my works:</h2>
@@ -17,10 +20,17 @@ title: Martynov Myroslav front-end dev
     {% assign i = forloop.rindex0 %}
     <li>
       {% if works[i].live %}
-      <a href="http://{{ works[i].url }}" rel="nofollow" class="post_url">{{ works[i].title }}</a> {% if works[i].agency %}<span>({{works[i].agency}})</span>{% endif %}<br />
+        <a href="http://{{ works[i].url }}" rel="nofollow" class="post_url">{{ works[i].title }}</a>
+        {% if works[i].agency %}
+          <span>({{works[i].agency}})</span>
+        {% endif %}
+      <br />
       {% else %}
-      <span class="post_url">{{ works[i].title }}</span> {% if works[i].agency %}<span>({{works[i].agency}})</span>{% endif %}<br />
+        <span class="post_url">{{ works[i].title }}</span> {% if works[i].agency %}
+        <span>({{works[i].agency}})</span>{% endif %}<br />
       {% endif %}
+      <small><date>{{works[i].date | date: "%-d %B %Y"}}</date>, {{works[i].description}}</small>
+      <br />
       <span>{{works[i].role}}</span>
     </li>
     {% endfor %}

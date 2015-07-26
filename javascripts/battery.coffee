@@ -1,3 +1,6 @@
+---
+---
+
 $ ->
   battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery
   if battery

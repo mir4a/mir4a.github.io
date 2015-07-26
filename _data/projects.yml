@@ -5,21 +5,21 @@
   url: "syvulya.com.ua"
   live: true
   date: 2010-12-10
-- title: "Race. Rental car service."
+- title: "Race, rental car service"
   description: "The very first my design job."
   role: "Design."
   agency: Megainfo
   url: "race.net.ua"
   live: true
   date: 2010-11-10
-- title: "Ukrmashservice."
+- title: "Ukrmashservice"
   description: "Another one design with using 3d rendering for illustration at header."
   role: "Design, 3d rendering, ui design."
   agency: Megainfo
   url: "rails.com.ua"
   live: true
   date: 2011-06-10
-- title: "Fond SP. Interior and exterior stuff."
+- title: "Fond SP, interior and exterior stuff"
   description: "It was a great experience of creating icons and illustrations for this site."
   role: "Design of homepage, icons and illustrations."
   agency: Megainfo
@@ -39,83 +39,107 @@
   url: "art-nataly.com"
   live: true
   date: 2011-06-10
-- title: "The Third Time. Football blog."
+- title: "3rd Time, football blog"
   description: "It was the very first site developing from scratch."
   role: "Design, coding, wordpress theming and hosting."
   url: "3taim.com.ua"
   live: true
   date: 2011-09-20
-- title: "USK Rubin. Football team."
+- title: "USK Rubin, football team"
   description: "First time of responsive designing."
   role: "Design, responsive, coding, wordpress theming and hosting."
   url: "usk-rubin.com"
   live: true
   date: 2012-04-20
-- title: "E-commerce template."
+- title: "E-commerce template"
   description: "Some design work for e-commerce business."
   role: "Design."
   agency: Megainfo
   live: false
   date: 2011-08-25
-- title: "Vintage studio."
+- title: "Vintage studio"
   description: "Designing for small studio of shades."
   role: "Design, coding, wordpress theming."
   agency: Inland Media
   url: "vintage-studio.com.ua"
   live: false
   date: 2011-11-25
-- title: "Djanem. Beauty salon."
+- title: "Djanem, beauty salon"
   description: "Designed web site for beauty salon."
   role: "Design."
   agency: Inland Media
   url: "djanem.com.ua"
-  live: true
+  live: false
   date: 2011-12-25
-- title: "Wolf. Scenic equipment."
+- title: "Wolf, scenic equipment"
   description: "Outsource working."
   role: "Coding, wordpress theming."
   agency: Primus Pro
   url: "wolf.dn.ua"
   live: false
   date: 2011-12-25
-- title: "Tormoz. Braking equipment."
+- title: "Tormoz, braking equipment"
   description: "Outsource working."
   role: "Coding, wordpress theming."
   agency: Primus Pro
   url: "tormoz.dn.ua"
-  live: true
+  live: false
   date: 2011-12-25
-- title: "Primus Pro. Digital agency."
+- title: "Primus Pro, digital agency"
   description: "First iteration of Primus Pro web site. No longer actual."
   role: "Coding, wordpress theming."
   agency: Primus Pro
   url: "primus-pro.com.ua"
-  live: true
+  live: false
   date: 2012-02-25
-- title: "Betamlin."
+- title: "Betamlin"
   description: "Corporate web site for Betamlin company."
   role: "Coding, wordpress theming."
   agency: AdFactory
   url: "beta-mlin.com.ua"
-  live: true
+  live: false
   date: 2012-07-25
-- title: "The Smena. Digital agency."
+- title: "The Smena, digital agency"
   description: "Site for digital agency."
   role: "Html/css/js + blog section on wp."
   agency: The Smena
   url: "thesmena.com"
   live: true
   date: 2012-11-25
-- title: "Brandmobile. Advertise agency."
+- title: "Brandmobile, advertise agency"
   description: "Site and cost calculator for advertise agency."
   role: "Template integration with wordpress and angular js calculator."
   agency: AdFactory
   url: "brandmobile.com.ua"
   live: false
-  date: 2013-09-25
-- title: "XSport."
+  date: 2013-10-20
+- title: "XSport"
   description: "Site about sports news."
   role: "HTML/CSS coding, custom AngularJS plugins."
   url: "xsport.ua"
   live: true
-  date: 2013-12-20
+  date: 2013-12-11
+- title: "Zprom"
+  description: "Cables, welding and other equipment for network building."
+  role: "HTML/CSS coding, wordpress, woocommerce integration"
+  url: "zprom.net"
+  live: true
+  date: 2013-10-01
+- title: "Druzhba Arena"
+  description: "Site about sport arena in Donetsk, the first home staduim of the HC Donbass."
+  role: "HTML/CSS coding, js"
+  url: "druzhba.dn.ua"
+  live: true
+  date: 2013-08-02
+- title: "August ir Ko"
+  description: "Landing page for wastewater plant's distributor."
+  role: "HTML/CSS coding, wordpress integration"
+  url: "augustrus.ru"
+  live: true
+  date: 2014-10-31
+- title: "iDetective app"
+  description: "Promo site about application."
+  role: "HTML/CSS coding"
+  url: "idetectiveapp.ru"
+  live: true
+  date: 2013-03-01
