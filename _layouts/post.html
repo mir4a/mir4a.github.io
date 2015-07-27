@@ -8,4 +8,23 @@ layout: default
 {{ content }}
 </div>
 
-
+<div class="share_links">
+  <a class="ln share_link"
+     href="https://www.linkedin.com/cws/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
+     target="_blank"
+     onclick="window.open('https://www.linkedin.com/cws/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}','linkedin-share-dialog','width=626,height=436');return false;">
+    linkedin
+  </a>
+  <a class="tw share_link"
+     href="https://twitter.com/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&via=mir4a_en"
+     target="_blank"
+     onclick="window.open('https://twitter.com/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&via=mir4a_en','twitter-share-dialog','width=626,height=436');return false;">
+    twitter
+  </a>
+  <a class="fb share_link"
+     href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
+     target="_blank"
+     onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}','facebook-share-dialog','width=626,height=436');return false;">
+    facebook
+  </a>
+</div>
