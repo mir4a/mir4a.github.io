@@ -1,13 +1,14 @@
 ---
 layout: post
 title:  "Freeze, javascript!"
+description: "Quick hint how to disable js for styling tooltips and other newly added DOM elements."
 categories:
   - blog
   - debug
 tags: devtools, css, javascript, jquery  
 ---
 
-Sometimes I want to freeze time and fix some issues motionless. Sadly but it real life it's not 
+Sometimes I want to freeze time and fix some issues motionless. Sadly but in real life it's not
 possible. But in front-end life I can freeze some jquery plugin and do whatever I want.
  
 The approach described below can save some time in css customizing dynamically added DOM elements, 

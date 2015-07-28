@@ -20,7 +20,10 @@ title: Martynov Myroslav front-end dev
     {% assign i = forloop.rindex0 %}
     <li>
       {% if works[i].live %}
-        <a href="http://{{ works[i].url }}" rel="nofollow" class="post_url">{{ works[i].title }}</a>
+        <a href="http://{{ works[i].url }}"
+           rel="nofollow"
+           target="_blank"
+           class="post_url">{{ works[i].title }}</a>
         {% if works[i].agency %}
           <span>({{works[i].agency}})</span>
         {% endif %}
