@@ -15,5 +15,9 @@ $ ->
 
   $commentWrap = $('#disqus_thread')
   if !!$commentWrap.length
+
     window.disqus_identifier = $commentWrap.data('disqus-identifier')
     $commentWrap.one 'click', '.show_comments', commentInit
+
+    if window.location.hash == '#disqus_thread'
+      $commentWrap.find('.show_comments').trigger('click')
