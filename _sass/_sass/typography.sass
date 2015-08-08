@@ -17,6 +17,22 @@ h1
 p
   text-indent: 15px
 
+blockquote
+  position: relative
+  margin-left: 0
+  padding-left: 40px
+  &:before
+    content: "\00ab"
+    font: bold italic 40px/0.5 "Playfair Display", "Georgia", sans-serif
+    position: absolute
+    left: 5px
+    top: 0
+  > p
+    &:after
+      content: '\00bb'
+      font: bold italic 20px/0.5 "Playfair Display", "Georgia", sans-serif
+      margin-left: 5px
+
 a,:link
   color: $link
   text-decoration: none

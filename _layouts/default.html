@@ -34,11 +34,16 @@
 
   {% assign first_cat  = page.categories | first %}
   {% if first_cat == "blog" %}
-  <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 22 }}">
-  <meta name="description" content="{{ page.content | strip_html | truncatewords: 22 }}">
+    {% if page.description %}
+      <meta name="twitter:description" content="{{ page.description }}">
+      <meta name="description" content="{{ page.description }}">
+    {% else %}
+      <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 22 }}">
+      <meta name="description" content="{{ page.content | strip_html | truncatewords: 22 }}">
+    {% endif %}
   {% else %}
-  <meta name="twitter:description" content="Martynov Miroslav. Front-end developer.">
-  <meta name="description" content="Martynov Miroslav. Front-end developer.">
+    <meta name="twitter:description" content="Martynov Miroslav. Front-end developer.">
+    <meta name="description" content="Martynov Miroslav. Front-end developer.">
   {% endif %}
 
   <meta name="twitter:domain" content="www.mir4a.pp.ua">
