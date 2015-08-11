@@ -4,6 +4,8 @@ highlighter: pygments
 safe: false
 lsi: false
 url: http://mir4a.pp.ua
+paginate: 10
+paginate_path: "blog/page:num"
 
 exclude: [_config.yml, Gemfile, Rakefile, Gemfile.lock]
 
