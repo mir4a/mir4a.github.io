@@ -5,7 +5,7 @@ description: "In this day I'll dig into abstract data type — lists."
 categories:
   - blog
   - challenge
-tags: javascript, challenge, abstract, lists, data types
+tags: js, challenge, abstract, lists, data types
 ---
 
 > A List is an ordered sequence of data

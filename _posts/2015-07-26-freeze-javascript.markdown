@@ -5,7 +5,7 @@ description: "Quick hint how to disable js for styling tooltips and other newly 
 categories:
   - blog
   - debug
-tags: devtools, css, javascript, jquery  
+tags: devtools, css, js, jquery
 ---
 
 Sometimes I want to freeze time and fix some issues motionless. Sadly but in real life it's not

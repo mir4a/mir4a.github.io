@@ -5,7 +5,7 @@ description: "From now and till the end of this summer I'll dig into algorithms 
 categories:
   - blog
   - challenge
-tags: algorithm, programming, javascript, challenge, goal  
+tags: algorithm, programming, js, challenge, goal
 ---
 
 It's time to dig into algorithms! But seriously, I don't have a formal degree in Computer Science

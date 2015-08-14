@@ -5,7 +5,7 @@ description: "JS implementation of lists ADT."
 categories:
   - blog
   - challenge
-tags: javascript, challenge, abstract, lists, data types, class
+tags: js, challenge, abstract, lists, data types, class
 ---
 
 Dear diary, today it was hard day and for now it's more questions than answers. The current

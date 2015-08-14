@@ -5,7 +5,7 @@ description: "Fix bugs in next/prev methods. Understanding why need front() and 
 categories:
   - blog
   - challenge
-tags: javascript, challenge, abstract, lists, data types, class
+tags: js, challenge, abstract, lists, data types, class
 ---
 
 On the clock is 2:00AM and technically I'm breaking rules of this 
@@ -33,7 +33,7 @@ when a new element is added to the list**</cite>.
 
 Also I still don't understand why the author didn't use the built-in property **length** and calculate it
 inside own methods after adding/removing elements in array. I've added `this.listSize` method which is read
-`length` property fpr `this.data` array.
+`length` property for `this.data` array.
 
 Tomorrow I'm going to finish with 3rd chapter and do practice with reading simple list from `txt` file.
 After that is following **Stacks** data structures.

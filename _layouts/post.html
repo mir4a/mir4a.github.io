@@ -8,24 +8,41 @@ layout: default
 {{ content }}
 </div>
 
+{% if page.tags[0] && page.tags[1] %}
+  {% capture hashtags %} {{page.tags[0]}}{{page.tags[1]}} {% endcapture %}
+{% else %}
+  {% assign hashtags = 'mir4a' %}
+{% endif %}
+
+{% if page.description %}
+  {% assign description = page.description %}
+{% else %}
+  {% assign description = page.content | strip_html | truncatewords: 22 %}
+{% endif %}
+
 <div class="share_links">
   <a class="ln share_link"
-     href="https://www.linkedin.com/cws/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
+     href="https://www.linkedin.com/shareArticle?mini=true&summary={{ description | cgi_escape }}&source={{ site.url | cgi_escape }}&title={{page.title | cgi_escape }}&url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
      target="_blank"
-     onclick="window.open('https://www.linkedin.com/cws/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}','linkedin-share-dialog','width=626,height=436');return false;">
+     onclick="javascript:window.open(this.href,'linkedin-share-dialog','width=626,height=436');return false;">
     linkedin
   </a>
   <a class="tw share_link"
-     href="https://twitter.com/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&via=mir4a_en"
+     href="https://twitter.com/share?text={{page.title | cgi_escape }}&hashtags={{ hashtags | cgi_escape }}&url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&via=mir4a_en"
      target="_blank"
-     onclick="window.open('https://twitter.com/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&via=mir4a_en','twitter-share-dialog','width=626,height=436');return false;">
+     onclick="javascript:window.open(this.href,'twitter-share-dialog','width=626,height=436');return false;">
     twitter
   </a>
   <a class="fb share_link"
      href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
      target="_blank"
-     onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}','facebook-share-dialog','width=626,height=436');return false;">
+     onclick="javascript:window.open(this.href,'facebook-share-dialog','width=626,height=436');return false;">
     facebook
+  </a>
+  <a class="gp share_link"
+     href="https://plus.google.com/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
+     onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+    google+
   </a>
 </div>
 

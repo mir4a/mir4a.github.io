@@ -5,7 +5,7 @@ description: "Objects, Arrays."
 categories:
   - blog
   - challenge
-tags: javascript, challenge, array, object  
+tags: js, challenge, array, object
 ---
 
 I started learning algorithms from Data Structures and Algorithms with JavaScript by Michael 
