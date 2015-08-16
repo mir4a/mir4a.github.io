@@ -27,13 +27,17 @@
   <meta name="fb:profile_id" content="mir4a">
   <meta name="fb:app_id" content="639182646216193">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:creator" content="@mir4a_en">
   {% if page.video %}
     <meta name="og:video" content="{{ page.video }}">
+    <meta name="twitter:card" content="player">
     <meta name="twitter:player" content="{{ page.video }}" >
+  {% else %}
+    <meta name="twitter:card" content="summary">
   {% endif %}
+
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:creator" content="@mir4a_en">
+
 
 
 
