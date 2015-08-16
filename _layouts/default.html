@@ -21,9 +21,6 @@
   <meta name="og:image:width" content="500">
   <meta name="og:image:height" content="500">
 
-  {% if page.video %}
-  <meta name="og:video" content="{{ page.video }}">
-  {% endif %}
   <meta name="og:site_name" content="Miroslav Martynov">
   <meta name="og:updated_time" content="{{ site.time }}">
 
@@ -33,6 +30,11 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:creator" content="@mir4a_en">
+  {% if page.video %}
+    <meta name="og:video" content="{{ page.video }}">
+    <meta name="twitter:player" content="{{ page.video }}" >
+  {% endif %}
+
 
 
   {% assign first_cat  = page.categories | first %}
