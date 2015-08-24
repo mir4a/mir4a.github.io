@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dubay, day 1"
+title:  "Dubai, day 1"
 description: "Arrive to Dubai. Night walk to the nearest supermarket."
 youtube: "ETC9OYEWJ10"
 categories:

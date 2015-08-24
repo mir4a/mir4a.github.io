@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dubay, day 2"
+title:  "Dubai, day 2"
 description: "Common sightseeing in Dubai, moll, the tallest building in the world, hi-tech metro 
               and the city not suited for nice walking."
 youtube: "PHjvMr0yfcc"
