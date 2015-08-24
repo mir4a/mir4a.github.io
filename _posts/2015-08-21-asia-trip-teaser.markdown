@@ -2,7 +2,7 @@
 layout: post
 title:  "Asia Trip trailer"
 description: "Next week I'll publish video diary of my trip to Dubai and South-Eastern Asia."
-video: "https://www.youtube.com/embed/_FSuP0JM5NI"
+youtube: "_FSuP0JM5NI"
 categories:
   - blog
   - travel

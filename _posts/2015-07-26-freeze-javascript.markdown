@@ -2,7 +2,7 @@
 layout: post
 title:  "Freeze, javascript!"
 description: "Quick hint how to disable js for styling tooltips and other newly added DOM elements."
-video: "https://www.youtube.com/embed/zobRra0wkHs"
+youtube: "zobRra0wkHs"
 categories:
   - blog
   - debug

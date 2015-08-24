@@ -11,15 +11,6 @@
   <meta name="og:title" content="{{ page.title }}">
   <meta name="og:locale" content="en_US">
 
-  <meta name="og:image" content="{{ site.url }}/images/Martynov_Myroslav._Front-end_developer.jpg">
-  <meta name="og:image:type" content="image/jpeg">
-  <meta name="og:image:width" content="500">
-  <meta name="og:image:height" content="500">
-
-  <meta name="og:image" content="{{ site.url }}/images/Martynov_Myroslav._Front-end_developer.jpg">
-  <meta name="og:image:type" content="image/jpeg">
-  <meta name="og:image:width" content="500">
-  <meta name="og:image:height" content="500">
 
   <meta name="og:site_name" content="Miroslav Martynov">
   <meta name="og:updated_time" content="{{ site.time }}">
@@ -27,14 +18,21 @@
   <meta name="fb:profile_id" content="mir4a">
   <meta name="fb:app_id" content="639182646216193">
 
-  {% if page.video %}
-    <meta name="og:video" content="{{ page.video }}">
+  {% if page.youtube %}
+    <meta name="og:image" content="https://img.youtube.com/vi/{{ page.youtube }}/hqdefault.jpg">
+    <meta name="og:image:type" content="image/jpeg">
+    <meta name="og:image:width" content="480">
+    <meta name="og:image:height" content="360">
+    <meta name="og:video" content="{{ page.youtube }}">
     <meta name="twitter:card" content="player">
-    <meta name="twitter:player" content="{{ page.video }}" >
+    <meta name="twitter:player" content="{{ page.youtube }}" >
     <meta name="twitter:player:width" content="506" >
     <meta name="twitter:player:height" content="285" >
-
   {% else %}
+    <meta name="og:image" content="{{ site.url }}/images/Martynov_Myroslav._Front-end_developer.jpg">
+    <meta name="og:image:type" content="image/jpeg">
+    <meta name="og:image:width" content="500">
+    <meta name="og:image:height" content="500">
     <meta name="twitter:card" content="summary">
   {% endif %}
 
