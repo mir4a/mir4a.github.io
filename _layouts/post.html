@@ -8,8 +8,8 @@ layout: default
 {{ content }}
 </div>
 
-{% if page.tags[0] && page.tags[1] %}
-  {% capture hashtags %} {{page.tags[0]}}{{page.tags[1]}} {% endcapture %}
+{% if page.tags[0] && page.tags[1] && page.tags[2] %}
+  {% capture hashtags %} {{page.tags[0]}}{{page.tags[1]}}{{page.tags[2]}} {% endcapture %}
 {% else %}
   {% assign hashtags = 'mir4a' %}
 {% endif %}
