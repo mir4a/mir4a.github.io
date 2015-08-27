@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sri Pada – Nuwara Eliya. Sri Lanka, day 2"
+title:  "Sri Pada – Nuwara Eliya. Sri Lanka, day 3"
 description: "This night we slept for few hour after long road and early in the morning 
               we started to climb to Adam's Peak (Sri Pada). The road to the top was exhausting 
               but it worth it we saw a beautiful picture on sunrise! On half way 
