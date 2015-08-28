@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Kandy – Dambulla – Anuradhapura. Sri Lanka, day 4"
+title:  "Kandy – Dambulla – Anuradhapura. Sri Lanka, day 5"
 description: "Found beautiful and cozy hotel by chance in Kandy I wanted to stay there longer. 
               But at afternoon we went to Dambulla and saw there mountain temple. 
               And in the Evening we was in Anuradhapura, the ancient capital of Sri Lanka."
