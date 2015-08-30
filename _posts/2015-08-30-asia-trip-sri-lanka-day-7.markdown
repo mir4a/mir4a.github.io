@@ -8,7 +8,7 @@ youtube: "cN4G-b9QS2Y"
 categories:
   - blog
   - travel
-tags: travel, srilanka, sigiriya
+tags: travel, srilanka, kalkudah, passikudah, googlestreetview
 ---
 
 Finally we swimming at the sea. At the morning at Kalkudah and Passikudah and then at Arugam Bay. 
