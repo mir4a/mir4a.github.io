@@ -52,4 +52,18 @@ layout: default
   <a class="show_comments" href="#disqus_thread">Show comments</a>
 </div>
 
+<hr class="dashed">
+
+<section class="author_section">
+  {% assign gh = site.github %}
+  <div class="clearfix">
+    <img src="/images/mir4a_64.jpg" alt="Martynov Myroslav" width="64" height="64" class="ava" />
+    Written by <strong>Miroslav Martynov</strong><br />
+    Hi is front-end developer<br />
+    {% if gh.owner_name %}
+      <a href="{{gh.owner_url}}">{{gh.owner_url}}</a><br />
+    {% endif %}
+  </div>
+</section>
+
 <script type="text/javascript" src="/javascripts/comments.js"></script>

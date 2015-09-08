@@ -1,14 +1,3 @@
 <div class="footer">
-  <div class="contact">
-    {% assign gh = site.github %}
-    {% if gh.owner_name %}
-
-    <div>
-      <img src="/images/mir4a_64.jpg" alt="Martynov Myroslav" width="64" height="64" class="ava" />
-      Miroslav Martynov<br />
-      front-end developer<br />
-      <a href="{{gh.owner_url}}">{{gh.owner_url}}</a><br />
-    </div>
-    {% endif %}
-  </div>
+  &copy; 2014&mdash;{{site.time | date: "%Y" }}
 </div>
