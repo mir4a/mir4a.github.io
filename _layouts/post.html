@@ -4,6 +4,20 @@ layout: default
 <h1>{{ page.title }}</h1>
 <time class="meta">{{ page.date | date_to_string }}</time>
 
+{% if page.tags[0] %}
+  <br>
+  <small><b>Tags:</b></small>
+  {% for tag in page.tags %}
+      <small><a href="/tag/{{ tag | remove: ',' }}">{{ tag }}</a></small>
+  {% endfor %}
+{% endif %}
+
+{% if page.categories[1] %}
+  <br>
+  <small><b>Category:</b></small>
+  <small><a href="/category/{{ page.categories[1] }}">{{ page.categories[1] }}</a></small>
+{% endif %}
+
 <div class="post">
 {{ content }}
 </div>
@@ -59,10 +73,11 @@ layout: default
   <div class="clearfix">
     <img src="/images/mir4a_64.jpg" alt="Martynov Myroslav" width="64" height="64" class="ava" />
     Written by <strong>Miroslav Martynov</strong><br />
-    Hi is front-end developer<br />
+    Front-end developer from Ukraine<br />
     {% if gh.owner_name %}
       <a href="{{gh.owner_url}}">{{gh.owner_url}}</a><br />
     {% endif %}
+    <b>Published at:</b> {{ page.date | date: "%F" }}
   </div>
 </section>
 
