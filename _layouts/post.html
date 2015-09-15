@@ -1,84 +1,91 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<time class="meta">{{ page.date | date_to_string }}</time>
+<article itemscope itemtype="http://schema.org/BlogPosting" role="article">
 
-{% if page.tags[0] %}
+  <h1 itemprop="name headline">{{ page.title }}</h1>
+  <time class="meta" itemprop="datePublished" datetime="{{ page.date | date_to_string }}">
+    {{ page.date | date_to_string}}
+  </time>
+
+  {% if page.tags[0] %}
   <br>
   <small><b>Tags:</b></small>
   {% for tag in page.tags %}
-      <small><a href="/tag/{{ tag | remove: ',' }}">{{ tag }}</a></small>
+  <small><a href="/tag/{{ tag | remove: ',' }}">{{ tag }}</a></small>
   {% endfor %}
-{% endif %}
+  {% endif %}
 
-{% if page.categories[1] %}
+  {% if page.categories[1] %}
   <br>
   <small><b>Category:</b></small>
   <small><a href="/category/{{ page.categories[1] }}">{{ page.categories[1] }}</a></small>
-{% endif %}
+  {% endif %}
 
-<div class="post">
-{{ content }}
-</div>
-
-{% if page.tags[0] && page.tags[1] && page.tags[2] %}
-  {% capture hashtags %} {{page.tags[0]}}{{page.tags[1]}}{{page.tags[2]}} {% endcapture %}
-{% else %}
-  {% assign hashtags = 'mir4a' %}
-{% endif %}
-
-{% if page.description %}
-  {% assign description = page.description %}
-{% else %}
-  {% assign description = page.content | strip_html | truncatewords: 22 %}
-{% endif %}
-
-<div class="share_links">
-  <a class="ln share_link"
-     href="https://www.linkedin.com/shareArticle?mini=true&summary={{ description | cgi_escape }}&source={{ site.url | cgi_escape }}&title={{page.title | cgi_escape }}&url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
-     target="_blank"
-     onclick="javascript:window.open(this.href,'linkedin-share-dialog','width=626,height=436');return false;">
-    linkedin
-  </a>
-  <a class="tw share_link"
-     href="https://twitter.com/share?text={{page.title | cgi_escape }}&hashtags={{ hashtags | cgi_escape }}&url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&via=mir4a_en"
-     target="_blank"
-     onclick="javascript:window.open(this.href,'twitter-share-dialog','width=626,height=436');return false;">
-    twitter
-  </a>
-  <a class="fb share_link"
-     href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
-     target="_blank"
-     onclick="javascript:window.open(this.href,'facebook-share-dialog','width=626,height=436');return false;">
-    facebook
-  </a>
-  <a class="gp share_link"
-     href="https://plus.google.com/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
-     onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-    google+
-  </a>
-</div>
-
-<hr class="dashed">
-
-<div id="disqus_thread" data-disqus-identifier="{{ page.id }}">
-  <a class="show_comments" href="#disqus_thread">Show comments</a>
-</div>
-
-<hr class="dashed">
-
-<section class="author_section">
-  {% assign gh = site.github %}
-  <div class="clearfix">
-    <img src="/images/mir4a_64.jpg" alt="Martynov Myroslav" width="64" height="64" class="ava" />
-    Written by <strong>Miroslav Martynov</strong><br />
-    Front-end developer from Ukraine<br />
-    {% if gh.owner_name %}
-      <a href="{{gh.owner_url}}">{{gh.owner_url}}</a><br />
-    {% endif %}
-    <b>Published at:</b> {{ page.date | date: "%F" }}
+  <div class="post" itemprop="articleBody">
+    {{ content }}
   </div>
-</section>
 
+  {% if page.tags[0] && page.tags[1] && page.tags[2] %}
+  {% capture hashtags %} {{page.tags[0]}}{{page.tags[1]}}{{page.tags[2]}} {% endcapture %}
+  {% else %}
+  {% assign hashtags = 'mir4a' %}
+  {% endif %}
+
+  {% if page.description %}
+  {% assign description = page.description %}
+  {% else %}
+  {% assign description = page.content | strip_html | truncatewords: 22 %}
+  {% endif %}
+
+  <div class="share_links">
+    <a class="ln share_link"
+       href="https://www.linkedin.com/shareArticle?mini=true&summary={{ description | cgi_escape }}&source={{ site.url | cgi_escape }}&title={{page.title | cgi_escape }}&url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
+       target="_blank"
+       onclick="javascript:window.open(this.href,'linkedin-share-dialog','width=626,height=436');return false;">
+      linkedin
+    </a>
+    <a class="tw share_link"
+       href="https://twitter.com/share?text={{page.title | cgi_escape }}&hashtags={{ hashtags | cgi_escape }}&url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&via=mir4a_en"
+       target="_blank"
+       onclick="javascript:window.open(this.href,'twitter-share-dialog','width=626,height=436');return false;">
+      twitter
+    </a>
+    <a class="fb share_link"
+       href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
+       target="_blank"
+       onclick="javascript:window.open(this.href,'facebook-share-dialog','width=626,height=436');return false;">
+      facebook
+    </a>
+    <a class="gp share_link"
+       href="https://plus.google.com/share?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}"
+       onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+      google+
+    </a>
+  </div>
+
+  <hr class="dashed">
+
+  <div id="disqus_thread" data-disqus-identifier="{{ page.id }}">
+    <a class="show_comments" href="#disqus_thread">Show comments</a>
+  </div>
+
+  <hr class="dashed">
+
+  <section class="author_section" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    {% assign gh = site.github %}
+    <div class="clearfix">
+      <img src="{{site.url}}/images/mir4a_64.jpg" alt="Martynov Myroslav" width="64" height="64" class="ava" itemprop="image" >
+      Written by <strong itemprop="name">Miroslav Martynov</strong><br/>
+      <div itemprop="description">
+        Front-end developer from Ukraine<br/>
+      </div>
+      {% if gh.owner_name %}
+      <a href="{{gh.owner_url}}">{{gh.owner_url}}</a><br/>
+      {% endif %}
+      <b>Published at:</b> {{ page.date | date: "%F" }}
+    </div>
+  </section>
+
+</article>
 <script type="text/javascript" src="/javascripts/comments.js"></script>
