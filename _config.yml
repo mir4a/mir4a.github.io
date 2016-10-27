@@ -3,7 +3,7 @@ markdown: redcarpet
 highlighter: pygments
 safe: false
 lsi: false
-url: //mir4a.pp.ua
+url: http://mir4a.pp.ua
 paginate: 10
 paginate_path: "blog/page:num"
 
