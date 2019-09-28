@@ -4,7 +4,7 @@
   agency: Megainfo
   url: "syvulya.com.ua"
   live: true
-  archived: false
+  archived: true
   date: 2010-12-10
 - title: "Race, rental car service"
   description: "The very first my design job."
@@ -36,7 +36,7 @@
   agency: Megainfo
   url: "cryo-tm.com.ua"
   live: true
-  archived: false
+  archived: true
   date: 2011-07-10
 - title: "Art Nataly"
   description: "Personal site of an artist Natalia Shiptuchovskaya. It was the very first my html/css coding. It was the beginning."
@@ -119,8 +119,8 @@
   role: "Html/css/js + blog section on wp."
   agency: The Smena
   url: "thesmena.com"
-  live: true
-  archived: false
+  live: false
+  archived: true
   date: 2012-11-25
 - title: "Brandmobile, advertise agency"
   description: "Site and cost calculator for advertise agency."
@@ -141,7 +141,7 @@
   description: "Cables, welding and other equipment for network building."
   role: "HTML/CSS coding, wordpress, woocommerce integration"
   url: "zprom.net"
-  live: true
+  live: false
   archived: false
   date: 2013-10-01
 - title: "Druzhba Arena"
