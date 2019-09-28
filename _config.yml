@@ -1,15 +1,17 @@
 name: Martynov Myroslav
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 safe: false
 lsi: false
-url: http://mir4a.pp.ua
+url: https://mir4a.pp.ua
 paginate: 10
 paginate_path: "blog/page:num"
 
 exclude: [_config.yml, Gemfile, Rakefile, Gemfile.lock]
 
-gems:
+plugins:
+  - jekyll-paginate
+  - jekyll-coffeescript
   - jekyll-archives
 
 jekyll-archives:
