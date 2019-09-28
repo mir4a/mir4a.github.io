@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "experimental.css",
+	"sources": [
+		"experimental.sass",
+		"_sass/experimental/blur.sass",
+		"_sass/experimental/basic.sass"
+	],
+	"sourcesContent": [
+		"@import \"experimental/blur\";\n@import \"experimental/basic\";\n\n",
+		"@mixin blur($radius) {\n  -webkit-filter: blur($radius);\n  filter: blur($radius); }\n\n$offset_position: -20px;\n.blurred_bg, .blurred_bg_hover {\n  position: fixed;\n  top: $offset_position;\n  right: $offset_position;\n  bottom: $offset_position;\n  left: $offset_position;\n  background: url(\"/images/experimental/bg_covers.jpg\");\n  background-size: cover; }\n\n.blurred_bg {\n  z-index: 0;\n  @include blur(5px); }\n.blurred_bg_hover {\n  clip: rect(0 0 0 0);\n  z-index: 1; }\n",
+		"@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic);\n.logo_wrap {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n  z-index: 9;\n  a {\n    font-family: 'Playfair Display','Georgia', sans-serif;\n    font-size: 14px;\n    font-weight: 900;\n    font-style: italic;\n    color: #000;\n    display: inline-block;\n    padding: 3px 10px 4px;\n    margin-bottom: 2px;\n    background: transparentize(#fff,0.5);\n    text-decoration: none; }\n  .go_back {\n    &:hover {\n      span {\n        border-bottom: none; } }\n    span {\n      border-bottom: 1px solid transparentize(#000,0.4); } } }\n"
+	],
+	"names": [],
+	"mappings": "AEAA,OAAO,CAAC,sEAAI;ADKZ,AAAA,WAAW,EAAE,iBAAiB,CAAC,EAC7B,QAAQ,EAAE,KAAK,EACf,GAAG,EAHc,KAAI,EAIrB,KAAK,EAJY,KAAI,EAKrB,MAAM,EALW,KAAI,EAMrB,IAAI,EANa,KAAI,EAOrB,UAAU,EAAE,yCAAyC,EACrD,eAAe,EAAE,KAAK,GAAG;;AAE3B,AAAA,WAAW,CAAC,EACV,OAAO,EAAE,CAAC,EAdV,cAAc,EAAE,SAAa,EAC7B,MAAM,EAAE,SAAa,GAcA;;AACvB,AAAA,iBAAiB,CAAC,EAChB,IAAI,EAAE,aAAa,EACnB,OAAO,EAAE,CAAC,GAAG;;AClBf,AAAA,UAAU,CAAC,EACT,QAAQ,EAAE,QAAQ,EAClB,GAAG,EAAE,IAAI,EACT,IAAI,EAAE,IAAI,EACV,OAAO,EAAE,CAAC,GAiBkD;;AArB9D,AAKE,UALQ,CAKR,CAAC,CAAC,EACA,WAAW,EAAE,wCAAwC,EACrD,SAAS,EAAE,IAAI,EACf,WAAW,EAAE,GAAG,EAChB,UAAU,EAAE,MAAM,EAClB,KAAK,EAAE,IAAI,EACX,OAAO,EAAE,YAAY,EACrB,OAAO,EAAE,YAAY,EACrB,aAAa,EAAE,GAAG,EAClB,UAAU,EAAiB,wBAAI,EAC/B,eAAe,EAAE,IAAI,GAAG;;AAf5B,AAkBM,UAlBI,CAgBR,QAAQ,AACL,MAAM,CACL,IAAI,CAAC,EACH,aAAa,EAAE,IAAI,GAAG;;AAnB9B,AAoBI,UApBM,CAgBR,QAAQ,CAIN,IAAI,CAAC,EACH,aAAa,EAAE,GAAG,CAAC,KAAK,CAAgB,kBAAI,GAAQ"
+}
