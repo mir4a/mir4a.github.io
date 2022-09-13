@@ -27,8 +27,8 @@
   role: "Design of homepage, icons and illustrations."
   agency: Megainfo
   url: "fondsp.dn.ua"
-  live: true
-  archived: false
+  live: false
+  archived: true
   date: 2011-07-20
 - title: "Cryo Inter Trading"
   description: "The very first my design job."
@@ -103,7 +103,7 @@
   role: "Coding, wordpress theming."
   agency: Primus Pro
   url: "primus-pro.com.ua"
-  live: true
+  live: false
   archived: true
   date: 2012-02-25
 - title: "Betamlin"

@@ -1,26 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width">
-  <title>{{ page.title }}</title>
-
-  <meta name="author" content="Myroslav Martynov">
-  <meta name="p:domain_verify" content="3e533f2f9b9d13c8cd8a2fda37931308"/>
-
-  <meta name="og:url" content="www.mir4a.pp.ua">
-  <meta name="og:type" content="website">
-  <meta name="og:title" content="{{ page.title }}">
-  <meta name="og:locale" content="en_US">
-
-
-  <meta name="og:site_name" content="Miroslav Martynov">
-  <meta name="og:updated_time" content="{{ site.time }}">
-
-  <meta name="fb:profile_id" content="mir4a">
-  <meta name="fb:app_id" content="639182646216193">
-
   {% if page.youtube %}
     <meta name="og:image" content="https://img.youtube.com/vi/{{ page.youtube }}/hqdefault.jpg">
     <meta name="og:image:type" content="image/jpeg">
@@ -41,6 +21,26 @@
     <meta name="og:image:height" content="500">
     <meta name="twitter:card" content="summary">
   {% endif %}
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>{{ page.title }}</title>
+
+  <meta name="author" content="Myroslav Martynov">
+  <meta name="p:domain_verify" content="3e533f2f9b9d13c8cd8a2fda37931308"/>
+
+  <meta name="og:url" content="www.mir4a.pp.ua">
+  <meta name="og:type" content="website">
+  <meta name="og:title" content="{{ page.title }}">
+  <meta name="og:locale" content="en_US">
+
+
+  <meta name="og:site_name" content="Myroslav Martynov">
+  <meta name="og:updated_time" content="{{ site.time }}">
+
+  <meta name="fb:profile_id" content="mir4a">
+  <meta name="fb:app_id" content="639182646216193">
 
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:creator" content="@mir4a_en">
@@ -63,9 +63,6 @@
   <meta name="twitter:site" content="@mir4a_en">
   <meta name="twitter:image:src" content="{{ site.url }}/images/social_100.jpg">
 
-
-  <!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
-  <script src="/javascripts/jquery-2.1.3.min.js"></script>
   <link rel="stylesheet" href="/css/fap.css" />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2">
 </head>
@@ -85,6 +82,5 @@
 </div>
 
 {% include analytics.html %}
-<script src="/javascripts/battery.js"></script>
 </body>
 </html>
