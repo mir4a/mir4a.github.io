@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <meta name="og:image" content="https://mir4a.pp.ua/images/Martynov_Myroslav_Front-end_developer.jpg" />
+    <meta name="og:image:type" content="image/jpeg" />
+    <meta name="og:image:width" content="500" />
+    <meta name="og:image:height" content="500" />
+    <meta name="twitter:card" content="summary" />
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Day first. Javascript Data Types.</title>
+
+  <meta name="author" content="Myroslav Martynov" />
+  <meta name="p:domain_verify" content="3e533f2f9b9d13c8cd8a2fda37931308" />
+
+  <meta name="og:url" content="www.mir4a.pp.ua" />
+  <meta name="og:type" content="website" />
+  <meta name="og:title" content="Day first. Javascript Data Types." />
+  <meta name="og:locale" content="en_US" />
+
+
+  <meta name="og:site_name" content="Myroslav Martynov" />
+  <meta name="og:updated_time" content="2022-10-04 12:13:23 +0200" />
+
+  <meta name="fb:profile_id" content="mir4a" />
+  <meta name="fb:app_id" content="639182646216193" />
+
+  <meta name="twitter:title" content="Day first. Javascript Data Types." />
+  <meta name="twitter:creator" content="@mir4a_en" />
+
+  
+  
+    
+      <meta name="twitter:description" content="Objects, Arrays." />
+      <meta name="description" content="Objects, Arrays." />
+    
+  
+
+  <meta name="twitter:domain" content="www.mir4a.pp.ua" />
+  <meta name="twitter:site" content="@mir4a_en" />
+  <meta name="twitter:image:src" content="https://mir4a.pp.ua/images/social_100.jpg" />
+
+  <link rel="stylesheet" href="/css/fap.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2">
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="container">
+    <div class="header">
+      <a class="logo" href="/">Martynov Myroslav</a>
+    </div>
+
+    <article itemscope itemtype="http://schema.org/BlogPosting" role="article">
+
+  <h1 itemprop="name headline">Day first. Javascript Data Types.</h1>
+  <time class="meta" itemprop="datePublished" datetime="09 Aug 2015">
+    09 Aug 2015
+  </time>
+
+  
+  <br>
+  <small><b>Tags:</b></small>
+  
+  <small><a href="/tag/js">js,</a></small>
+  
+  <small><a href="/tag/challenge">challenge,</a></small>
+  
+  <small><a href="/tag/array">array,</a></small>
+  
+  <small><a href="/tag/object">object</a></small>
+  
+  
+
+  
+  <br>
+  <small><b>Category:</b></small>
+  <small><a href="/category/challenge">challenge</a></small>
+  
+
+  <div class="post" itemprop="articleBody">
+    <p>I started learning algorithms from Data Structures and Algorithms with JavaScript by Michael 
+McMillan <a href="http://amzn.com/B00IV3J23Y">link</a>. First chapter was not interesting, 
+it was about setting up dev environment (I’m using node 0.12 for playing with algorithms) and how 
+<strong>Objects</strong> are creating at javascript. Next chapter was talking about <strong>Arrays</strong> and I found funny 
+thing I didn’t know before.</p>
+
+<h3 id="arrays">Arrays</h3>
+
+<p>If you try to create and assign new array to var using the <code class="highlighter-rouge">new Array()</code> constructor and pass 
+integer as only one argument it will create new array with length equals to parameter and with 
+undefined elements inside it:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+var ar = new Array(5);
+
+console.log(ar.length); // 5
+console.log(ar[1]);     // undefined
+console.log(ar);        // [ , , , , ]
+
+</code></pre></div></div>
+
+<p>And I can create a loop iterating each <code class="highlighter-rouge">undefined</code> element in this array. And loop will iterate 5 times:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+var ar = new Array(5);
+
+for (var i = 0; i &lt; ar.length; i++) {
+  console.log(i);
+}
+
+// 0
+// 1
+// 2
+// 3
+// 4
+
+</code></pre></div></div>
+
+<p>Ok, I got this, but have no idea where I can use this behaviour. Maybe init arrays with predefined 
+length and then check it’s length everywhere?</p>
+
+<p>Other interesting feature of javascript arrays is that it can has different types for it’s elements. 
+For instance, <code class="highlighter-rouge">var arMixed = ['hey!', 235, {foo: 'bar'}, 4, [2,3,5]]</code> would be ok for javascript and 
+<code class="highlighter-rouge">arMixed.length</code> will print 5.</p>
+
+<h4 id="shallow-copy-vs-deep-copy">Shallow copy vs Deep copy</h4>
+
+<p>Other important thing I’ve learned that simple assigning one variable with array to another will make
+a link and changes in first var will cause second:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span>
+
+<span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>   <span class="c1">// [9,2,3]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>   <span class="c1">// [9,2,3]</span>
+
+<span class="nx">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>   <span class="c1">// [9,5,3]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>   <span class="c1">// [9,5,3]</span></code></pre></figure>
+
+<p>For a <strong>deep copy</strong> the following will work:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+
+<span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">c</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// [1,2,3];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span> <span class="c1">// [1,2,3];</span>
+
+<span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// [1,5,3];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span> <span class="c1">// [1,2,3];</span></code></pre></figure>
+
+<h4 id="built-in-functions">Built-in functions</h4>
+
+<p>Arrays in javascript isn’t arrays itself, it’s a type of Object which is have built-in methods and 
+properties. Functions has the following types: <strong>accessors</strong>, <strong>mutators</strong>, 
+<strong>iterators</strong>. Don’t want to explain everyone of them, just list some of the common useful functions.</p>
+
+<h5 id="accessor-functions">Accessor Functions</h5>
+
+<p>Such as <code class="highlighter-rouge">.indexOf()</code> or <code class="highlighter-rouge">.lastIndexOf()</code> for searching element’s position in array. <code class="highlighter-rouge">.join()</code>, 
+<code class="highlighter-rouge">.toString()</code> for converting arrays to string. And <code class="highlighter-rouge">.splice()</code> and <code class="highlighter-rouge">.concat()</code> for creating new array
+ from existing.</p>
+
+<h5 id="mutator-functions">Mutator Functions</h5>
+
+<p>The function I never used before is <code class="highlighter-rouge">.unshift()</code> add new element at the beginning of an array, 
+like <code class="highlighter-rouge">.push()</code> but vise versa. To remove elements from the end <code class="highlighter-rouge">.pop()</code> and <code class="highlighter-rouge">.shift()</code> from the 
+beginning, <code class="highlighter-rouge">.splice()</code> for middle.</p>
+
+<h6 id="sorting">Sorting</h6>
+
+<p><code class="highlighter-rouge">.sort()</code> which is work well for strings but not for integers, <code class="highlighter-rouge">.reverse()</code>. Interesting thing, 
+<code class="highlighter-rouge">.sort()</code> function can accept <strong>comparator</strong> function as argument and it may help sort integers in 
+array:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">numArr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">44</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span>
+
+<span class="kd">function</span> <span class="nx">comparator</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">num1</span> <span class="o">-</span> <span class="nx">num2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">numArr</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">comparator</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numArr</span><span class="p">);</span>       <span class="c1">// [ 0, 1, 10, 25, 34, 44, 99, 100 ]</span></code></pre></figure>
+
+<p>Also it doesn’t fails if array has mixed types of elements, but sort it out in a different way and 
+result may be unexpected:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">mixedArr</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">44</span><span class="p">,</span> <span class="dl">'</span><span class="s1">100</span><span class="dl">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="dl">'</span><span class="s1">string25</span><span class="dl">'</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">0</span> <span class="p">];</span>
+
+<span class="kd">function</span> <span class="nx">comparator</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">num1</span> <span class="o">-</span> <span class="nx">num2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">mixedArr</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">comparator</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mixedArr</span><span class="p">);</span>    <span class="c1">// [ 1, 10, 44, '100', 'string25', 0, 34, 99 ]</span></code></pre></figure>
+
+<p><strong><em>Question:</em></strong> How does exaclty <code class="highlighter-rouge">.sort()</code> work and what is performance and big-O?</p>
+
+<h5 id="iterator-functions">Iterator Functions</h5>
+
+<p><code class="highlighter-rouge">.forEach()</code>, <code class="highlighter-rouge">.every()</code>, <code class="highlighter-rouge">.some()</code>, <code class="highlighter-rouge">.reduce()</code>.
+<code class="highlighter-rouge">.reduce()</code> takes function as an argument which takes each element in array from left to right. `
+.reduceRight()` do the same but from right to left.</p>
+
+<h6 id="iterators-returning-new-arrays">Iterators returning new arrays</h6>
+
+<p><code class="highlighter-rouge">.map()</code> the same as <code class="highlighter-rouge">.forEach()</code> but return <strong>new</strong> array. <code class="highlighter-rouge">.filter()</code> similar to <code class="highlighter-rouge">.every()</code>.</p>
+
+<h4 id="two-dimensional-and-multidimensional-arrays">Two-Dimensional and Multidimensional Arrays</h4>
+
+<blockquote>
+  <p>The <strong>Matrix</strong> has you…</p>
+</blockquote>
+
+<p>Creating multidimensional array:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">matrix</span><span class="p">(</span><span class="nx">numrows</span><span class="p">,</span> <span class="nx">numcols</span><span class="p">,</span> <span class="nx">initial</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numrows</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">cols</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">numcols</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">cols</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">initial</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">cols</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">fifthMatrix</span> <span class="o">=</span> <span class="nx">matrix</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fifthMatrix</span><span class="p">);</span>       <span class="c1">// [ [ 0, 0, 0, 0, 0 ],</span>
+                                <span class="c1">//   [ 0, 0, 0, 0, 0 ],</span>
+                                <span class="c1">//   [ 0, 0, 0, 0, 0 ],</span>
+                                <span class="c1">//   [ 0, 0, 0, 0, 0 ],</span>
+                                <span class="c1">//   [ 0, 0, 0, 0, 0 ] ]</span></code></pre></figure>
+
+<h5 id="jagged-arrays">Jagged Arrays</h5>
+
+<p>Have different number of items in rows. This isn’t a problem in js because arrays in js has length 
+property.</p>
+
+  </div>
+
+  
+
+  
+
+  <div class="share_links">
+    <a class="ln share_link"
+       href="https://www.linkedin.com/shareArticle?mini=true&summary=Objects%2C+Arrays.&source=https%3A%2F%2Fmir4a.pp.ua&title=Day+first.+Javascript+Data+Types.&url=https%3A%2F%2Fmir4a.pp.ua%2Fblog%2Fchallenge%2F2015%2F08%2F09%2Fday-one-javascript-data-types.html"
+       target="_blank"
+       onclick="javascript:window.open(this.href,'linkedin-share-dialog','width=626,height=436');return false;">
+      linkedin
+    </a>
+    <a class="tw share_link"
+       href="https://twitter.com/share?text=Day+first.+Javascript+Data+Types.&hashtags=+js%2Cchallenge%2Carray%2C+&url=https%3A%2F%2Fmir4a.pp.ua%2Fblog%2Fchallenge%2F2015%2F08%2F09%2Fday-one-javascript-data-types.html&via=mir4a_en"
+       target="_blank"
+       onclick="javascript:window.open(this.href,'twitter-share-dialog','width=626,height=436');return false;">
+      twitter
+    </a>
+    <a class="fb share_link"
+       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmir4a.pp.ua%2Fblog%2Fchallenge%2F2015%2F08%2F09%2Fday-one-javascript-data-types.html"
+       target="_blank"
+       onclick="javascript:window.open(this.href,'facebook-share-dialog','width=626,height=436');return false;">
+      facebook
+    </a>
+  </div>
+
+  <hr class="dashed">
+
+  <div id="disqus_thread" data-disqus-identifier="/blog/challenge/2015/08/09/day-one-javascript-data-types">
+    <a class="show_comments" href="#disqus_thread">Show comments</a>
+  </div>
+
+  <hr class="dashed">
+
+  <section class="author_section" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    
+    <div class="clearfix">
+      <img src="https://mir4a.pp.ua/images/mir4a_64.jpg" alt="Martynov Myroslav" width="64" height="64" class="ava" itemprop="image" >
+      Written by <strong itemprop="name">Myroslav Martynov</strong><br/>
+      <div itemprop="description">
+        Front-end developer from Europe<br/>
+      </div>
+      
+      <b>Published at:</b> 2015-08-09
+    </div>
+  </section>
+
+</article>
+<script src="/javascripts/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="/javascripts/comments.js"></script>
+
+
+    <div class="footer">
+  &copy; Myroslav Martynov, 2014&mdash;2022
+</div>
+
+  </div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57218010-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

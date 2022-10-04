@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>*** Experimental *** | Blurred bg with some action</title>
+  <meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+<div class="logo_wrap">
+  <a class="logo" href="https://mir4a.pp.ua">Martynov Myroslav</a> <br />
+  <a class="go_back" href="https://mir4a.pp.ua/experimental/"><span>go back</span></a>
+</div>
+<link rel="stylesheet" href="/css/experimental.css" />
+
+<div class="blurred_bg"></div>
+<div class="blurred_bg_hover"></div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//underscorejs.org/underscore-min.js"></script>
+<script>
+  var blur = $('.blurred_bg_hover');
+  var gap = 75;
+
+
+  function clipMove(e) {
+    var y1 = e.clientY - gap,
+        x1 = e.clientX + gap,
+        y2 = e.clientY + gap,
+        x2 = e.clientX - gap;
+    blur.css('clip', 'rect('+ y1 +'px, ' + x1 + 'px, ' + y2 + 'px, ' + x2 + 'px)');
+  }
+
+  var throttled = _.throttle(clipMove, 80);
+
+  if (blur.length) {
+    $(window).on('mousemove', throttled);
+  }
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57218010-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

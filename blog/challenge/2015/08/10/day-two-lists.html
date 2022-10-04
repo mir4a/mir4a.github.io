@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <meta name="og:image" content="https://mir4a.pp.ua/images/Martynov_Myroslav_Front-end_developer.jpg" />
+    <meta name="og:image:type" content="image/jpeg" />
+    <meta name="og:image:width" content="500" />
+    <meta name="og:image:height" content="500" />
+    <meta name="twitter:card" content="summary" />
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Day second. Javascript Data Types: lists.</title>
+
+  <meta name="author" content="Myroslav Martynov" />
+  <meta name="p:domain_verify" content="3e533f2f9b9d13c8cd8a2fda37931308" />
+
+  <meta name="og:url" content="www.mir4a.pp.ua" />
+  <meta name="og:type" content="website" />
+  <meta name="og:title" content="Day second. Javascript Data Types: lists." />
+  <meta name="og:locale" content="en_US" />
+
+
+  <meta name="og:site_name" content="Myroslav Martynov" />
+  <meta name="og:updated_time" content="2022-10-04 12:13:23 +0200" />
+
+  <meta name="fb:profile_id" content="mir4a" />
+  <meta name="fb:app_id" content="639182646216193" />
+
+  <meta name="twitter:title" content="Day second. Javascript Data Types: lists." />
+  <meta name="twitter:creator" content="@mir4a_en" />
+
+  
+  
+    
+      <meta name="twitter:description" content="In this day I'll dig into abstract data type — lists." />
+      <meta name="description" content="In this day I'll dig into abstract data type — lists." />
+    
+  
+
+  <meta name="twitter:domain" content="www.mir4a.pp.ua" />
+  <meta name="twitter:site" content="@mir4a_en" />
+  <meta name="twitter:image:src" content="https://mir4a.pp.ua/images/social_100.jpg" />
+
+  <link rel="stylesheet" href="/css/fap.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2">
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="container">
+    <div class="header">
+      <a class="logo" href="/">Martynov Myroslav</a>
+    </div>
+
+    <article itemscope itemtype="http://schema.org/BlogPosting" role="article">
+
+  <h1 itemprop="name headline">Day second. Javascript Data Types: lists.</h1>
+  <time class="meta" itemprop="datePublished" datetime="10 Aug 2015">
+    10 Aug 2015
+  </time>
+
+  
+  <br>
+  <small><b>Tags:</b></small>
+  
+  <small><a href="/tag/js">js,</a></small>
+  
+  <small><a href="/tag/challenge">challenge,</a></small>
+  
+  <small><a href="/tag/abstract">abstract,</a></small>
+  
+  <small><a href="/tag/lists">lists,</a></small>
+  
+  <small><a href="/tag/data">data</a></small>
+  
+  <small><a href="/tag/types">types</a></small>
+  
+  
+
+  
+  <br>
+  <small><b>Category:</b></small>
+  <small><a href="/category/challenge">challenge</a></small>
+  
+
+  <div class="post" itemprop="articleBody">
+    <blockquote>
+  <p>A List is an ordered sequence of data</p>
+</blockquote>
+
+<h2 id="adt">ADT</h2>
+
+<p>ADT is an Abstract Data Type</p>
+
+<blockquote>
+  <p>class of objects whose logical behavior is defined by a set of values and a set of operations</p>
+</blockquote>
+
+<p><strong>Lists</strong> should have the following properties and methods:</p>
+
+<ul>
+  <li><strong>listSize</strong> representing number of elements in the list;</li>
+  <li><strong>append/prepend/insert</strong> methods, for adding new element;</li>
+  <li><strong>shift/pop/splice</strong> method, removing element;</li>
+  <li><strong>clear</strong> for making list empty;</li>
+  <li><strong>find</strong> helper method for searching position of the item in the list;</li>
+  <li><strong>getElement</strong> to print particular element from its position.</li>
+</ul>
+
+<p>Yesterday I’ll try to implement Lists Class and find out, why the author didn’t use the built-in 
+property <code class="highlighter-rouge">length</code> and implement it’s from scratch 
+<a href="https://github.com/oreillymedia/data_structures_and_algorithms_using_javascript/blob/master/Chapter3/chap3_1.js#L15">Chapter 3.1</a></p>
+
+  </div>
+
+  
+
+  
+
+  <div class="share_links">
+    <a class="ln share_link"
+       href="https://www.linkedin.com/shareArticle?mini=true&summary=In+this+day+I%27ll+dig+into+abstract+data+type+%E2%80%94+lists.&source=https%3A%2F%2Fmir4a.pp.ua&title=Day+second.+Javascript+Data+Types%3A+lists.&url=https%3A%2F%2Fmir4a.pp.ua%2Fblog%2Fchallenge%2F2015%2F08%2F10%2Fday-two-lists.html"
+       target="_blank"
+       onclick="javascript:window.open(this.href,'linkedin-share-dialog','width=626,height=436');return false;">
+      linkedin
+    </a>
+    <a class="tw share_link"
+       href="https://twitter.com/share?text=Day+second.+Javascript+Data+Types%3A+lists.&hashtags=+js%2Cchallenge%2Cabstract%2C+&url=https%3A%2F%2Fmir4a.pp.ua%2Fblog%2Fchallenge%2F2015%2F08%2F10%2Fday-two-lists.html&via=mir4a_en"
+       target="_blank"
+       onclick="javascript:window.open(this.href,'twitter-share-dialog','width=626,height=436');return false;">
+      twitter
+    </a>
+    <a class="fb share_link"
+       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmir4a.pp.ua%2Fblog%2Fchallenge%2F2015%2F08%2F10%2Fday-two-lists.html"
+       target="_blank"
+       onclick="javascript:window.open(this.href,'facebook-share-dialog','width=626,height=436');return false;">
+      facebook
+    </a>
+  </div>
+
+  <hr class="dashed">
+
+  <div id="disqus_thread" data-disqus-identifier="/blog/challenge/2015/08/10/day-two-lists">
+    <a class="show_comments" href="#disqus_thread">Show comments</a>
+  </div>
+
+  <hr class="dashed">
+
+  <section class="author_section" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    
+    <div class="clearfix">
+      <img src="https://mir4a.pp.ua/images/mir4a_64.jpg" alt="Martynov Myroslav" width="64" height="64" class="ava" itemprop="image" >
+      Written by <strong itemprop="name">Myroslav Martynov</strong><br/>
+      <div itemprop="description">
+        Front-end developer from Europe<br/>
+      </div>
+      
+      <b>Published at:</b> 2015-08-10
+    </div>
+  </section>
+
+</article>
+<script src="/javascripts/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="/javascripts/comments.js"></script>
+
+
+    <div class="footer">
+  &copy; Myroslav Martynov, 2014&mdash;2022
+</div>
+
+  </div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57218010-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

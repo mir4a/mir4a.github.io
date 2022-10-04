@@ -1,0 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic);
+.blurred_bg, .blurred_bg_hover { position: fixed; top: -20px; right: -20px; bottom: -20px; left: -20px; background: url("/images/experimental/bg_covers.jpg"); background-size: cover; }
+
+.blurred_bg { z-index: 0; -webkit-filter: blur(5px); filter: blur(5px); }
+
+.blurred_bg_hover { clip: rect(0 0 0 0); z-index: 1; }
+
+.logo_wrap { position: absolute; top: 20px; left: 20px; z-index: 9; }
+
+.logo_wrap a { font-family: 'Playfair Display','Georgia', sans-serif; font-size: 14px; font-weight: 900; font-style: italic; color: #000; display: inline-block; padding: 3px 10px 4px; margin-bottom: 2px; background: rgba(255, 255, 255, 0.5); text-decoration: none; }
+
+.logo_wrap .go_back:hover span { border-bottom: none; }
+
+.logo_wrap .go_back span { border-bottom: 1px solid rgba(0, 0, 0, 0.6); }
+
+/*# sourceMappingURL=experimental.css.map */
